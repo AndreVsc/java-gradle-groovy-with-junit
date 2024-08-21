@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
+    implementation 'org.apache.commons:commons-text:1.10.0'
+}
+
+application {
+    mainClass = 'org.example.app.Main' // Verifique se a classe principal está corretamente configurada
+}
+
+test {
+    useJUnitPlatform()
+}
